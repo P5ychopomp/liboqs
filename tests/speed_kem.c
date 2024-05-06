@@ -173,12 +173,12 @@ int main(int argc, char **argv) {
 		return EXIT_FAILURE;
 	}
 
-	print_system_info();
+	// print_system_info();
 
-	printf("Speed test\n");
-	printf("==========\n");
+	// printf("Speed test\n");
+	// printf("==========\n");
 
-	PRINT_TIMER_HEADER
+	// PRINT_TIMER_HEADER
 	if (single_kem != NULL) {
 		rc = kem_speed_wrapper(single_kem->method_name, duration, printKemInfo, doFullCycle);
 		if (rc != OQS_SUCCESS) {
@@ -193,7 +193,7 @@ int main(int argc, char **argv) {
 			}
 		}
 	}
-	PRINT_TIMER_FOOTER
+	// PRINT_TIMER_FOOTER
 	OQS_destroy();
 
 	return ret;
